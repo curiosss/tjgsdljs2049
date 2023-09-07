@@ -91,6 +91,12 @@ class _BookingPageState extends State<BookingPage> {
       setState(() {
         isProcessing = false;
       });
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Заполните данные полностью'),
+        ),
+      );
     }
   }
 
